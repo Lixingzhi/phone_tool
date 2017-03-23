@@ -5,35 +5,31 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.TextView;
 
 import com.example.mill.phonetool.R;
 
-import java.util.ArrayList;
-
 /**
- * Created by Mill_li on 2017/3/19.
+ * Created by Mill_li on 2017/3/23.
  */
 
-public class HomeAdapter extends BaseAdapter {
+public class BasicInfoAdapter extends BaseAdapter {
 
-    private ArrayList<String> data;
+    private static final String TAG = "BasicInfoAdapter";
+
     private Context context;
 
-    public HomeAdapter(ArrayList<String> info, Context context) {
-        this.data = info;
+    public BasicInfoAdapter(Context context) {
         this.context = context;
     }
 
     @Override
     public int getCount() {
-        /* 返回0则不会执行getView函数 */
-        return data.size();
+        return 8;
     }
 
     @Override
     public Object getItem(int position) {
-        return data.get(position);
+        return position;
     }
 
     @Override
@@ -45,11 +41,8 @@ public class HomeAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
 
         if (convertView == null) {
-            convertView = LayoutInflater.from(context).inflate(R.layout.adapter_home, null);
+            convertView = LayoutInflater.from(context).inflate(R.layout.adapter_basicinfo, null);
         }
-
-        TextView info = (TextView) convertView.findViewById(R.id.info);
-        info.setText(data.get(position));
 
         return convertView;
     }
