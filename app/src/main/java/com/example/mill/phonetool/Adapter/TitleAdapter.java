@@ -1,12 +1,11 @@
 package com.example.mill.phonetool.Adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ListAdapter;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.mill.phonetool.R;
@@ -28,7 +27,7 @@ public class TitleAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return 10;
+        return 11;
     }
 
     @Override
@@ -44,20 +43,17 @@ public class TitleAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
-            convertView = LayoutInflater.from(context).inflate(R.layout.adapter_title, null);
-
-            tv_title = (TextView) convertView.findViewById(R.id.tv_title);
+            convertView = LayoutInflater.from(context).inflate(R.layout.basicinfo, null);
+            //tv_title = (TextView) convertView.findViewById(R.id.tv_title);
         }
 
+        Log.i(TAG, "position = " + position);
         switch (position) {
             case 0: {
-                tv_title.setText("基本信息");
-                View view = LayoutInflater.from(context).inflate(R.layout.adapter_basicinfo, null);
-                ListView listView = (ListView) convertView.findViewById(R.id.lv_info);
-                BasicInfoAdapter infoAdapter = new BasicInfoAdapter(context);
+                //tv_title.setText("基本信息");
+                convertView = LayoutInflater.from(context).inflate(R.layout.basicinfo, null);
 
-                listView.setAdapter(infoAdapter);
-
+                /*
                 ListAdapter listAdapter = listView.getAdapter();
                 if(listAdapter == null) {
                     break;
@@ -74,57 +70,67 @@ public class TitleAdapter extends BaseAdapter {
                 // listView.getDividerHeight()获取子项间分隔符占用的高度
                 // params.height最后得到整个ListView完整显示需要的高度
                 listView.setLayoutParams(params);
-
+                */
                 break;
             }
 
             case 1: {
-                tv_title.setText("存储(可用/总量)");
+                //tv_title.setText("存储(可用/总量)");
+                convertView = LayoutInflater.from(context).inflate(R.layout.memory, null);
                 break;
             }
 
             case 2: {
-                tv_title.setText("CPU");
+                //tv_title.setText("CPU");
+                convertView = LayoutInflater.from(context).inflate(R.layout.cpu, null);
                 break;
             }
 
             case 3: {
-                tv_title.setText("显示");
+                //tv_title.setText("显示");
+                convertView = LayoutInflater.from(context).inflate(R.layout.display, null);
                 break;
             }
 
             case 4: {
-                tv_title.setText("相机");
+                //tv_title.setText("相机");
+                convertView = LayoutInflater.from(context).inflate(R.layout.camera, null);
                 break;
             }
 
             case 5: {
-                tv_title.setText("电池");
+                //tv_title.setText("电池");
+                convertView = LayoutInflater.from(context).inflate(R.layout.battery, null);
                 break;
             }
 
             case 6: {
-                tv_title.setText("外观");
+                //tv_title.setText("外观");
+                convertView = LayoutInflater.from(context).inflate(R.layout.surface, null);
                 break;
             }
 
             case 7: {
-                tv_title.setText("OS");
+                //tv_title.setText("OS");
+                convertView = LayoutInflater.from(context).inflate(R.layout.os, null);
                 break;
             }
 
             case 8: {
-                tv_title.setText("传输");
+                //tv_title.setText("传输");
+                convertView = LayoutInflater.from(context).inflate(R.layout.transmission, null);
                 break;
             }
 
             case 9: {
-                tv_title.setText("网络");
+                //tv_title.setText("网络");
+                convertView = LayoutInflater.from(context).inflate(R.layout.network, null);
                 break;
             }
 
             case 10: {
-                tv_title.setText("传感器");
+                //tv_title.setText("传感器");
+                convertView = LayoutInflater.from(context).inflate(R.layout.sensor, null);
                 break;
             }
 

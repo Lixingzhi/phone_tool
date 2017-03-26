@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="存储（可用/总量）"
+        android:textSize="30sp" />
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:stretchColumns="*">
+
+        <TableRow>
+
+            <TextView
+                android:gravity="left"
+                android:text="运行内存"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_ram"
+                android:gravity="right"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="left"
+                android:text="机身存储"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_fuselage_storage"
+                android:gravity="right"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_gravity="left"
+                android:text="内置存储"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_Buildin_Memory"
+                android:gravity="right"
+                android:textSize="20sp" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

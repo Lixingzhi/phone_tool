@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="传感器"
+        android:textSize="30sp" />
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:stretchColumns="*">
+
+        <TableRow>
+
+            <TextView
+                android:gravity="left"
+                android:text="加速度传感器"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_sensorcceleration"
+                android:gravity="right"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="left"
+                android:text="环境温度传感器"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_sensortemperature"
+                android:gravity="right"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="left"
+                android:text="游戏旋转向量传感器"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_sensorGamerotationvector"
+                android:gravity="right"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="left"
+                android:text="地磁旋转矢量传感器"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_sensorGeomagneticrotationvector"
+                android:gravity="right"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="left"
+                android:text="重力传感器"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_sensorGravity"
+                android:gravity="right"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="left"
+                android:text="陀螺仪传感器"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_sensorgyroscope"
+                android:gravity="right"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="left"
+                android:text="未校准陀螺仪传感器"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_sensorUncalibratedgyroscope"
+                android:gravity="right"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="left"
+                android:text="心率传感器"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_sensorHeartrate"
+                android:gravity="right"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="left"
+                android:text="光线传感器"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_sensorLight"
+                android:gravity="right"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="left"
+                android:text="线性加速度传感器"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_sensorLinearaccelerometer"
+                android:gravity="right"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="left"
+                android:text="磁场传感器"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_sensorMagnetic"
+                android:gravity="right"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="left"
+                android:text="未校准磁力传感器"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_sensorUncalibratedMagnetic"
+                android:gravity="right"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="left"
+                android:text="方向传感器"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_sensorDirection"
+                android:gravity="right"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="left"
+                android:text="压力传感器"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_sensorPressure"
+                android:gravity="right"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="left"
+                android:text="近距离传感器"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_sensorProximity"
+                android:gravity="right"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="left"
+                android:text="相对温度传感器"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_sensorRelativetemperature"
+                android:gravity="right"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="left"
+                android:text="旋转矢量传感器"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_sensorRotatingvector"
+                android:gravity="right"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="left"
+                android:text="特殊动作触发传感器"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_sensorSpecialactiontrigger"
+                android:gravity="right"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="left"
+                android:text="计步传感器"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_sensorStep"
+                android:gravity="right"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="left"
+                android:text="步行检测传感器"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_sensorWalkingdetection"
+                android:gravity="right"
+                android:textSize="20sp" />
+        </TableRow>
+
+    </TableLayout>
+</LinearLayout>

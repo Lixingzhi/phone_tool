@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="传输"
+        android:textSize="30sp" />
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:stretchColumns="*">
+
+        <TableRow>
+
+            <TextView
+                android:gravity="left"
+                android:text="WIFI"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_transmissionwifi"
+                android:gravity="right"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="left"
+                android:text="蓝牙"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_transmissionbluetooth"
+                android:gravity="right"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="left"
+                android:text="NFC"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_transmissionnfc"
+                android:gravity="right"
+                android:textSize="20sp" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

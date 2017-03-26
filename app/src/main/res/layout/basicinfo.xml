@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="基本信息"
+        android:textSize="30sp" />
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:stretchColumns="*">
+
+        <TableRow>
+
+            <TextView
+                android:gravity="left"
+                android:text="品牌"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_brand"
+                android:gravity="right"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="left"
+                android:text="型号"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_model"
+                android:gravity="right"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_gravity="left"
+                android:text="CPU型号"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_cpumodel"
+                android:gravity="right"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_gravity="left"
+                android:text="GPU渲染器"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_gpu_renderer"
+                android:gravity="right"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_gravity="left"
+                android:text="分辨率"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_resolution_ratio"
+                android:gravity="right"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_gravity="left"
+                android:text="后置摄像头"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_back_camera"
+                android:gravity="right"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_gravity="left"
+                android:text="前置摄像头"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_front_camera"
+                android:gravity="right"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_gravity="left"
+                android:text="设备串号"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_sn"
+                android:gravity="right"
+                android:textSize="20sp" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>
