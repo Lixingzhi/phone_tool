@@ -1,14 +1,30 @@
 package com.example.mill.phonetool.Adapter;
 
+import android.app.Activity;
+import android.app.Notification;
 import android.content.Context;
+import android.opengl.GLSurfaceView;
+import android.os.Build;
+import android.os.Handler;
+import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.mill.phonetool.R;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+import javax.microedition.khronos.egl.EGLConfig;
+import javax.microedition.khronos.opengles.GL10;
 
 /**
  * Created by Mill_li on 2017/3/19.
@@ -19,10 +35,12 @@ public class TitleAdapter extends BaseAdapter {
     private static final String TAG = "TitleAdapter";
 
     private Context context;
-    private TextView tv_title;
+    private Activity activity;
+    private TextView textView;
 
-    public TitleAdapter(Context context) {
+    public TitleAdapter(Context context, Activity activity) {
         this.context = context;
+        this.activity = activity;
     }
 
     @Override
@@ -53,6 +71,21 @@ public class TitleAdapter extends BaseAdapter {
                 //tv_title.setText("基本信息");
                 convertView = LayoutInflater.from(context).inflate(R.layout.basicinfo, null);
 
+                textView = (TextView) convertView.findViewById(R.id.tv_brand);
+                textView.setText(android.os.Build.BRAND);
+
+                textView = (TextView) convertView.findViewById(R.id.tv_model);
+                textView.setText(Build.MODEL);
+
+                textView = (TextView) convertView.findViewById(R.id.tv_cpumodel);
+                textView.setText(getCpuInfo()[1]);
+
+                WindowManager windowManager = activity.getWindowManager();
+                Display display = windowManager.getDefaultDisplay();
+                int screenWidth = screenWidth = display.getWidth();
+                int screenHeight = screenHeight = display.getHeight();
+                textView = (TextView) convertView.findViewById(R.id.tv_resolution_ratio);
+                textView.setText(screenHeight + "*" + screenWidth);
                 /*
                 ListAdapter listAdapter = listView.getAdapter();
                 if(listAdapter == null) {
@@ -140,5 +173,32 @@ public class TitleAdapter extends BaseAdapter {
         }
 
         return convertView;
+    }
+
+    public void handleMessage(Notification.MessagingStyle.Message msg) {
+
+    }
+
+    public String[] getCpuInfo() {
+        String str1 = "/proc/cpuinfo";
+        String str2="";
+        String[] cpuInfo={"",""};
+        String[] arrayOfString;
+        try {
+            FileReader fr = new FileReader(str1);
+            BufferedReader localBufferedReader = new BufferedReader(fr, 8192);
+            str2 = localBufferedReader.readLine();
+            arrayOfString = str2.split("\\s+");
+            for (int i = 2; i < arrayOfString.length; i++) {
+                cpuInfo[0] = cpuInfo[0] + arrayOfString[i] + " ";
+            }
+            str2 = localBufferedReader.readLine();
+            arrayOfString = str2.split("\\s+");
+            //arrayOfString = str2.split("\\t");
+            cpuInfo[1] += arrayOfString[3];
+            localBufferedReader.close();
+        } catch (IOException e) {
+        }
+        return cpuInfo;
     }
 }

@@ -31,7 +31,7 @@ public class SystemInfoActivity extends Activity {
     }
 
     private void initdata() {
-        infoadapter = new TitleAdapter(this);
+        infoadapter = new TitleAdapter(this.getBaseContext(), this);
 
         listView = (ListView) findViewById(R.id.lv_title);
         listView.setAdapter(infoadapter);
